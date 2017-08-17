@@ -24,22 +24,8 @@ from time import sleep
 from wrappers import *
 from fonctions import *
 
-
 def main():
-    # Création du dossier attente de traitement
-    WAITPATH = os.path.join(os.path.expanduser("~"), "Pictures", "Attente")
-    if not os.path.exists(WAITPATH):
-        os.makedirs(WAITPATH, mode=0o777)
-    # inscription class
-    camera = GPhoto(subprocess)    
-    fileName = camera.capture_image_and_download()
-    # inscription de la class Photo
-    file = Photo(os.path.join(os.path.expanduser("~"),"PhotoMatonPi", fileName))
-    timeLapsStart = False
-    # Creation du nouveau nom
-    newPathFile = os.path.join(WAITPATH,str('{0}{1}'.format(datetimeShot.strftime("%y%m%d-%H%M%S"),file.extFile)))
-    # Deplace/rennome la photo
-    file = file.move(newPathFile)
+    capture_image()
 
 
 if __name__ == "__main__":
