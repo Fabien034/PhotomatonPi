@@ -7,6 +7,7 @@ Installation
 
 		sudo apt-get install gphoto2 
 		sudo apt-get install libgphoto2-dev
+		sudo apt-get install python-dev
 		sudo pip3 install gphoto2		
 
 	si vous ne disposé pas de Pip, vous le trouverez ici: <http://pypi.python.org/pypi/pip>
